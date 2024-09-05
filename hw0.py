@@ -40,7 +40,7 @@ def order_scores():
     '''
     "*** WRITE YOUR CODE HERE ***"
     import csv
-    with open(r"C:\Users\gaura\Downloads\scores.csv", mode='r') as f:
+    with open(r"scores.csv", mode='r') as f:
         csv_reader=csv.DictReader(f)
         values=[]
         for row in csv_reader:
