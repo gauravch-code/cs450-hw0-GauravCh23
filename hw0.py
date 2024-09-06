@@ -37,18 +37,16 @@ def alternative_sum(start,n):
     '''
 import csv
 def order_scores():
-    path=r'data/scores.csv'
-    values=[]
-    with open(path, mode='r') as f:
+    with open(r"C:\Users\gaura\Downloads\scores.csv", mode='r') as f:
         csv_reader=csv.DictReader(f)
+        values=[]
         for row in csv_reader:
-            values.append(row)
-            
-    sorted_values=sorted(values, key=lambda d:d['scores'])
-    l=[]
-    for dict in sorted_values:
-        l.append(dict['name'])
-    return l 
+            values.append(row)      
+        sorted_values=sorted(values, key=lambda d:d['scores'])  
+        l=[]
+        for dict in sorted_values:
+            l.append(dict['name'])  
+        return l 
     
 
     
