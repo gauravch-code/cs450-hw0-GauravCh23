@@ -40,7 +40,7 @@ def order_scores():
     '''
     "*** WRITE YOUR CODE HERE ***"
     import pandas as pd
-    df = pd.read_csv(r'C:\Users\gaura\Downloads\scores.csv')
+    df = pd.read_csv(r'data/scores.csv')
     sorted_table = df.sort_values(by='scores')
     l= sorted_table['name'].tolist
     return l
