@@ -37,7 +37,7 @@ def alternative_sum(start,n):
     '''
 import csv
 def order_scores():
-    with open(r"C:\Users\gaura\Downloads\scores.csv", mode='r') as f:
+    with open(r'data\scores.csv', mode='r') as f:
         csv_reader=csv.DictReader(f)
         values=[]
         for row in csv_reader:
