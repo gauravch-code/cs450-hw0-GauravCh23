@@ -38,20 +38,19 @@ alternative_sum(15,5)
         read the files scores.csv in the data directory and return the list of names sorted in ascending order of the scores.
     '''
     "*** WRITE YOUR CODE HERE ***"
-
 import csv
 def order_scores():
     path=r'data/scores.csv'
     values=[]
     with open(path, mode='r') as f:
         csv_reader=csv.DictReader(f)
-        
         for row in csv_reader:
-            values.append(row)    
-    sorted_values=sorted(values, key=lambda d:d['scores'])  
+            values.append(row)
+            
+    sorted_values=sorted(values, key=lambda d:d['scores'])
     l=[]
     for dict in sorted_values:
-        l.append(dict['name']) 
+        l.append(dict['name'])
     return l 
     
 
