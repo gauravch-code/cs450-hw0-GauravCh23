@@ -32,12 +32,11 @@ def alternative_sum(start,n):
             l.append(new)
     return l 
 
-alternative_sum(15,5)
-
 '''
         read the files scores.csv in the data directory and return the list of names sorted in ascending order of the scores.
     '''
     "*** WRITE YOUR CODE HERE ***"
+
 import csv
 def order_scores():
     path=r'data/scores.csv'
