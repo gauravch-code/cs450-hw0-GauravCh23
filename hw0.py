@@ -39,9 +39,19 @@ def order_scores():
         read the files scores.csv in the data directory and return the list of names sorted in ascending order of the scores.
     '''
     "*** WRITE YOUR CODE HERE ***"
-    import pandas as pd
-    df = pd.read_csv(r'data/scores.csv')
-    sorted_table = df.sort_values(by='scores')
-    l= sorted_table['name'].tolist
-    return l
+   import csv
+    path='data/scores.csv'
+    pairs=[]
+    with open(path,'r') as f:
+        scores_CSV = csv.reader(f)
+        next(scores_CSV)
+    
+        for row in scores_CSV:
+            name,score=row
+            pairs.append((name, int(score)))
+    sorted_pairs=sorted(pairs,key=lambda x: x[1])
+
+    names=[pair[0] for pair in sorted_pairs]
+    return names
+
     
