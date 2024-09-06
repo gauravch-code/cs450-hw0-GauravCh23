@@ -34,24 +34,28 @@ def alternative_sum(start,n):
 
 alternative_sum(15,5)
 
-import csv
-def order_scores():
-    path='data/scores.csv'
-    with open(path, mode='r') as f:
-        csv_reader=csv.DictReader(f)
-        values=[]
-    for row in csv_reader:
-        values.append(row)      
-    sorted_values=sorted(values, key=lambda d:d['scores'])  
-    l=[]
-    for dict in sorted_values:
-        l.append(dict['name']) 
-    return l 
-
-    
-
-    '''
+'''
         read the files scores.csv in the data directory and return the list of names sorted in ascending order of the scores.
     '''
     "*** WRITE YOUR CODE HERE ***"
+
+import csv
+def order_scores():
+    path='data/scores.csv'
+    pairs=[]
+    with open(path,'r') as f:
+        scores_CSV = csv.reader(f)
+        next(scores_CSV)
+    
+        for row in scores_CSV:
+            name,score=row
+            pairs.append((name, int(score)))
+    sorted_pairs=sorted(pairs,key=lambda x: x[1])
+
+    names=[pair[0] for pair in sorted_pairs]
+    return names
+
+    
+
+    
 
