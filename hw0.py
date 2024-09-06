@@ -40,18 +40,18 @@ def order_scores():
     '''
     "*** WRITE YOUR CODE HERE ***"
    import csv
-    path='data/scores.csv'
-    pairs=[]
-    with open(path,'r') as f:
-        scores_CSV = csv.reader(f)
-        next(scores_CSV)
+path='data/scores.csv'
+pairs=[]
+with open(path,'r') as f:
+    scores_CSV = csv.reader(f)
+    next(scores_CSV)
     
-        for row in scores_CSV:
-            name,score=row
-            pairs.append((name, int(score)))
-    sorted_pairs=sorted(pairs,key=lambda x: x[1])
+    for row in scores_CSV:
+        name,score=row
+        pairs.append((name, int(score)))
+sorted_pairs=sorted(pairs,key=lambda x: x[1])
 
-    names=[pair[0] for pair in sorted_pairs]
-    return names
+names=[pair[0] for pair in sorted_pairs]
+return names
 
     
