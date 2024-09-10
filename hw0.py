@@ -21,20 +21,21 @@ def alternative_sum(start,n):
     "*** WRITE YOUR CODE HERE ***"
     
     
-    if start < 0 or not (5<=n<=20):
+    if start < 0 or not (5<=n<=20):'''checking if n value lies between 5 and 20 and checking if start value is positive'''
         return []
     l=[start]
     while len(l)<n:
         if len(l)<3:
             l.append(l[-1]+l[-1])
         else:
-            new=l[-1]+l[-3]
+            new=l[-1]+l[-3]'''sum of last and third-last element to append it to the list'''
             l.append(new)
     return l 
 
-'''
+    '''
         read the files scores.csv in the data directory and return the list of names sorted in ascending order of the scores.
     '''
+    "*** WRITE YOUR CODE HERE ***"
 import csv
 def order_scores():
     path='data/scores.csv'
