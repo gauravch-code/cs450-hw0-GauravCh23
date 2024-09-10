@@ -46,9 +46,9 @@ def order_scores():
         for row in scores_CSV:
             name,score=row
             pairs.append((name, int(score)))
-    sorted_pairs=sorted(pairs,key=lambda x: x[1])
+    s_pairs=sorted(pairs,key=lambda x: x[1])
 
-    names=[pair[0] for pair in sorted_pairs]
+    names=[pair[0] for pair in s_pairs]
     return names
 
     
