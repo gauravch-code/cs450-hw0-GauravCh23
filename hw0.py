@@ -52,7 +52,6 @@ def order_scores():
 
     names=[pair[0] for pair in s_pairs]
     return names
-
     
 
     
