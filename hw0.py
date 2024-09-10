@@ -39,14 +39,14 @@ import csv
 def order_scores():
     path='data/scores.csv'
     pairs=[]
-    with open(path,'r') as f:
-        scores_CSV = csv.reader(f)
-        next(scores_CSV)
+    with open(path,'r') as f:'''reading the data from the file'''
+        scores = csv.reader(f)
+        next(scores)
     
-        for row in scores_CSV:
+        for row in scores:
             name,score=row
             pairs.append((name, int(score)))
-    s_pairs=sorted(pairs,key=lambda x: x[1])
+    s_pairs=sorted(pairs,key=lambda x: x[1])'''sorting the names based on their respective scores'''
 
     names=[pair[0] for pair in s_pairs]
     return names
