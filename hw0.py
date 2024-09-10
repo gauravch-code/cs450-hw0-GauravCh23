@@ -26,7 +26,7 @@ def alternative_sum(start,n):
     l=[start]
     while len(l)<n:
         if len(l)<3:
-            l.append(l[-1]*2)
+            l.append(l[-1]+l[-1])
         else:
             new=l[-1]+l[-3]
             l.append(new)
